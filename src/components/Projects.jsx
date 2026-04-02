@@ -58,10 +58,26 @@ export default function Projects() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* Gradient overlay on image — always visible, subtle dark fade at bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  {/* Hover overlay — stronger on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  {/* Badge */}
+                  {project.badge && (
+                    <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-white z-10"
+                      style={{
+                        background: 'linear-gradient(135deg, #10B981, #059669)',
+                        boxShadow: '0 2px 10px rgba(16,185,129,0.35)',
+                        border: '1px solid rgba(255,255,255,0.15)',
+                      }}
+                    >
+                      ✦ {project.badge}
+                    </span>
+                  )}
 
                   {/* Hover links */}
-                  <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                  <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-10">
                     {project.liveUrl && (
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
                         className="p-2 rounded-lg backdrop-blur-sm text-txt-primary hover:text-accent shadow-sm transition-colors"

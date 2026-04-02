@@ -1,13 +1,14 @@
 const projects = [
   {
     id: 1,
-    title: 'ShopScope — E-Commerce Platform',
-    description: 'A premium e-commerce web application with dark/light mode, 3D parallax hero, product filtering, cart management, and a fully responsive cinematic UI.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=340&fit=crop',
-    tags: ['React', 'Tailwind CSS', 'JavaScript', 'Responsive'],
-    highlights: ['Dark/Light Mode', 'Premium UI', 'Cart System'],
-    liveUrl: '#',
-    githubUrl: '#',
+    title: 'HopeFund — Charity Donation Platform',
+    description: 'A full-stack charity donation platform that allows users to discover, create, and support fundraising projects with secure authentication, real-time donation tracking, and a ranking system.',
+    image: '/hopefund-hero.png',
+    tags: ['React', 'Tailwind CSS', 'JavaScript', 'Node.js', 'Express', 'MySQL'],
+    highlights: ['Responsive', 'Real-time', 'Donation System', 'Modern UI'],
+    liveUrl: 'https://hopefund-26.vercel.app/',
+    githubUrl: 'https://github.com/DevTNoHope/NNM_Project',
+    badge: 'Production Ready',
   },
   {
     id: 2,
